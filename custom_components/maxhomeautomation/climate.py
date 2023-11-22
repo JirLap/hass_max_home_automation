@@ -83,6 +83,7 @@ class MaxHomeAutomationClimate(ClimateEntity):
         self._name = name
         self._hvac_list = [HVAC_MODE_AUTO, HVAC_MODE_HEAT_COOL, HVAC_MODE_HEAT, HVAC_MODE_OFF]
         self._device_handler = device_handler
+        self._attr_unique_id = device_handler._device_hex_address
         
     @property
     def supported_features(self):

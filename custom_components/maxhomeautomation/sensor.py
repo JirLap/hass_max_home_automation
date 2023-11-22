@@ -130,6 +130,7 @@ class MaxHomeAutomationSensor(Entity):
             raise ValueError("Unknown Max! Home Automation sensor type: {}".format(sensor_type))
         # store values
         self._device_handler = device_handler
+        self._attr_unique_id = device_handler._device_hex_address + "_" + sensor_type
         self._name = name
         self._sensor_type = sensor_type
         self._state = None
@@ -191,6 +192,7 @@ class MaxHomeAutomationDutySensor(Entity):
         """Initialize the sensor."""
         # store values
         self._cubehandle = cubehandle
+        self._attr_unique_id = cubehandle._cube_hex_address + "_duty"
         self._name = name
         self._state = None
         # read current value

@@ -1,0 +1,43 @@
+gateways:
+  host: 192.168.0.210
+  port: 8088
+  scan_interval: 10
+  cubes:
+    - hex_address: 022EBE
+      name: MAX Gateway
+      radiator_thermostats:
+        - hex_address: 03BE25
+          name: Žebřík-KH
+        - hex_address: 03C4E3
+          name: Radiátor-Š
+        - hex_address: 143F5D
+          name: Nízký-Š
+        - hex_address: 05CC4A
+          name: Radiátor-A
+        - hex_address: 03C5E3
+          name: Radiátor-L
+        - hex_address: 03BE13
+          name: Podlaha-H
+        - hex_address: 03C3B6
+          name: Podlaha-H+K
+        - hex_address: 03C70A
+          name: Žebřík-KD
+      wall_thermostats:
+        - hex_address: 029CD7
+          name: Termostat-KH
+        - hex_address: 02996B
+          name: Termostat-Š
+        - hex_address: 029CD1
+          name: Termostat-A
+        - hex_address: 02A70F
+          name: Termostat-L
+        - hex_address: 02A39C
+          name: Termostat-H
+      window_shutters:
+        - hex_address: 166EA9
+          name: Okno-K
+        - hex_address: 166E9E
+          name: Ventilace-Š
+        - hex_address: 166E1E
+          name: Ventilace-A
+      eco_buttons:

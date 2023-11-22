@@ -154,6 +154,7 @@ class MaxHomeAutomationBinarySensor(BinarySensorEntity):
         if sensor_type not in MHA_ALLOWED_SENSOR_TYPES:
             raise ValueError("Unknown Max! Home Automation sensor type: {}".format(sensor_type))        
         self._device_handler = device_handler
+        self._attr_unique_id = device_handler._device_hex_address + "_" + sensor_type
         self._name = name
         self._sensor_type = sensor_type
         self._read_state = None
